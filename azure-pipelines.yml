@@ -2,7 +2,7 @@ trigger:
 - master  # Define the branch to trigger the pipeline
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'window-latest'
 
 steps:
 - task: UsePythonVersion@0

@@ -6,12 +6,12 @@ pool:
 
 steps:
 - script: |
-    curl -o python_installer.exe https://www.python.org/ftp/python/2.7.18/python-2.7.18-amd64.exe
+    curl -o python_installer.exe https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe
     python_installer.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
-  displayName: 'Install Python 2.7 x64'
+  displayName: 'Install Python 3.12.0 x64'
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.6'
+    versionSpec: '3.12.0'
     addToPath: true
     architecture: 'x64'
 

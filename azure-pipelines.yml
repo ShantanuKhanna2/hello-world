@@ -1,19 +1,15 @@
 trigger:
-- master  # Define the branch to trigger the pipeline
+- master  # Define the branch that triggers the pipeline
 
 pool:
-    vmImage: 'window-latest'
-    name: Azure pipelines
-variables:
-  python.version: '3.6'
-
+  vmImage: 'windows-latest'  # Use a Windows agent, change to 'ubuntu-latest' for a Linux agent
 
 steps:
 - task: UsePythonVersion@0
-  displayName: 'Use Python $(python.version)'
+  displayName: 'Use Python 3.x'  # Replace '3.x' with the desired Python version
   inputs:
-    versionSpec: '$(python.version)'
-  continueOnError: true
+    versionSpec: '3.x'
+    addToPath: true  # Adds Python to the PATH
 
 - script: |
     python -c "print('Hello, World!')"

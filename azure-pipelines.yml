@@ -6,10 +6,10 @@ pool:
 
 steps:
 - task: UsePythonVersion@0
-  displayName: 'Use Python 3.x'  # Replace '3.x' with the desired Python version
   inputs:
-    versionSpec: '3.x'
-    addToPath: true  # Adds Python to the PATH
+    versionSpec: '3.6'
+    addToPath: true
+    architecture: 'x64'
 
 - script: |
     python -c "print('Hello, World!')"

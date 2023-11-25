@@ -5,6 +5,10 @@ pool:
   vmImage: 'windows-latest'  # Use a Windows agent, change to 'ubuntu-latest' for a Linux agent
 
 steps:
+- script: |
+    curl -o python_installer.exe https://www.python.org/ftp/python/2.7.18/python-2.7.18-amd64.exe
+    python_installer.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+  displayName: 'Install Python 2.7 x64'
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.6'

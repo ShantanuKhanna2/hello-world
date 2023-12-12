@@ -27,8 +27,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install pytest
       
     - name: Run python script
-      run: python print_Hello.py
+      run: python test_markers_ex.py
       working-directory: D:\a\hello-world\hello-world
       shell: cmd

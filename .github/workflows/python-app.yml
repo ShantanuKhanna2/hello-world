@@ -30,3 +30,5 @@ jobs:
       
     - name: Run python script
       run: python print_Hello.py
+      working-directory: D:\a\hello-world\hello-world
+      shell: cmd
